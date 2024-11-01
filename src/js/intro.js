@@ -33,9 +33,9 @@ function introTxt() {
 }
 
 // 페이지 이동 함수
-function mainMove() {
-  // git 전용
-  // location.href ="../PYS_Portfolio/html/main.html";
-  // local 전용
-  location.href = "../src/html/main.html";
-}
+// function mainMove() {
+//   // git 전용
+//   // location.href ="../PYS_Portfolio/html/main.html";
+//   // local 전용
+//   location.href = "../src/html/main.html";
+// }
