@@ -75,7 +75,7 @@ select {
   border: 0;
   outline: 0;
   vertical-align: baseline;
-  background: transparent;
+  // background: #eff2ff;
   font-size: 10px;
   font-weight: 500;
   font-family: "Plus Jakarta Sans", sans-serif;
@@ -109,11 +109,13 @@ body {
   overflow-y: auto;
   transition: background-color 5s ease;
   background-color: rgba(106, 146, 172, 0.07);
-  height: 100vh;
+  height: 100%;
 }
 
 img {
   width: 100%;
+  border-radius: 1rem;
+  box-shadow: 1rem -1rem 1rem 0rem #e3e0e0;
 }
 
 a {
@@ -126,9 +128,48 @@ li {
   list-style: none;
 }
 
+header {
+  height: 6rem;
+  transition: background 3s ease;
+  background: rgba(58, 138, 192, 0.07);
+}
+
 section {
     display : flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
-    height: 100vh;
+    height: 100%;
+    gap : 4rem;
+}
+
+article {
+  width: 100%;
+  display : flex;
+  justify-content: center;
+  align-items: flex-start;
+  &:nth-of-type(2) {
+    img {
+      width: 98%;
+    }
+  }
+  &:nth-of-type(3) {
+    img {
+      width: 98%;
+    }
+  }
+}
+
+main {
+  margin-top : 6rem;
+}
+
+footer {
+  display : flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-pagination-progressbar {
+  top : unset !important;
+  bottom : 0 !important;
 }
