@@ -29,7 +29,7 @@ function introTxt() {
   setTimeout(introTxt, $(".animate-letter").length * 100 + 2500);
 
   // 애니메이션이 처음 실행된 후 5초 뒤 mainMove 함수 호출
-  setTimeout(mainMove, $(".animate-letter").length * 100 + 5500);
+  setTimeout(mainMove, $(".animate-letter").length * 100 + 6000);
 }
 
 // 페이지 이동 함수
