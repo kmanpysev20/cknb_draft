@@ -1,0 +1,214 @@
+html,
+body,
+div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+var,
+b,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video,
+button,
+input,
+select {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  vertical-align: baseline;
+  background: transparent;
+  font-size: 10px;
+  font-weight: 500;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-style: normal;
+  font-optical-sizing: auto;
+  scroll-behavior: smooth;
+  color: black;
+}
+
+html {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  letter-spacing: -0.1rem;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+main {
+  position: relative;
+}
+
+body {
+  overflow-x: hidden;
+  overflow-y: auto;
+  transition: background-color 5s ease;
+  background-color: rgba(106, 146, 172, 0.07);
+  height: 100vh;
+}
+
+img {
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  scroll-behavior: smooth;
+}
+
+li {
+  list-style: none;
+}
+
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+@keyframes loading1 {
+  from {
+    width: 0;
+  }
+  to {
+    width: 60%;
+  }
+}
+@keyframes loading2 {
+  from {
+    width: 0;
+  }
+  to {
+    width: 60%;
+  }
+}
+.intro {
+  position: relative;
+}
+.intro video {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  filter: brightness(0.9);
+}
+.intro .wrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+}
+.intro .wrap .updown-transition .animate-letter {
+  font-size: 4vw;
+  font-weight: bold;
+  color: white;
+  display: inline-block;
+  position: relative;
+}
+.intro .wrap [class*=line-ani] {
+  display: block;
+  width: 18%;
+  height: 0.2rem;
+  position: absolute;
+  z-index: 1;
+  background: white;
+  animation-iteration-count: infinite;
+}
+.intro .wrap [class*=line-ani].ani1 {
+  left: 0;
+  top: 15%;
+  animation-duration: 2s;
+  animation-name: loading1;
+  animation-iteration-count: infinite;
+}
+.intro .wrap [class*=line-ani].ani2 {
+  right: 0;
+  bottom: 15%;
+  animation-duration: 2s;
+  animation-name: loading2;
+}
+
+@media (min-width: 768px) {
+  .intro .wrap img {
+    width: 60%;
+  }
+  .intro .wrap .animate-letter {
+    font-size: 2.5vw !important;
+  }
+}
