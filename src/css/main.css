@@ -701,6 +701,15 @@ footer nav .scan-wrap img:hover {
   animation-duration: 2s;
   animation-name: loading2;
 }
+.intro .wrap .label-center {
+  margin-top: 6rem;
+}
+.intro .wrap .label-center .ldBar-label {
+  font-size: 3rem;
+  font-weight: bold;
+  color: white;
+  top: 7rem;
+}
 
 @media (min-width: 768px) {
   .intro .wrap img {

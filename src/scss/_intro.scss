@@ -56,6 +56,15 @@
                 animation-name: loading2;
             }
         }
+        .label-center {
+            margin-top : 6rem;
+            .ldBar-label {
+                font-size: 3rem;
+                font-weight: bold;
+                color : white;
+                top : 7rem;
+            }
+        }
     }
 }
 
