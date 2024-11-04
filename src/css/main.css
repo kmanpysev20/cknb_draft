@@ -435,6 +435,9 @@ footer nav .scan-wrap img:hover {
   height: 100vh;
   padding: 2rem;
 }
+.sub-section img {
+  max-width: 100rem;
+}
 
 .chat-section {
   display: flex;
@@ -446,7 +449,7 @@ footer nav .scan-wrap img:hover {
 }
 .chat-section img {
   width: 100%;
-  max-width: 30rem;
+  max-width: 25rem;
 }
 
 .intro {
