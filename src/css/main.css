@@ -436,10 +436,10 @@ footer nav .scan-wrap img:hover {
   padding: 2rem;
 }
 .sub-section img {
-  max-width: 100rem;
+  max-width: 35rem;
 }
 
-.chat-section {
+.in-section {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -447,9 +447,199 @@ footer nav .scan-wrap img:hover {
   height: 100vh;
   padding: 2rem;
 }
-.chat-section img {
+.in-section img {
   width: 100%;
-  max-width: 25rem;
+  max-width: 40rem;
+}
+
+.select-section {
+  width: 100%;
+  flex-direction: column;
+  margin-top: 6rem;
+  margin-bottom: 12rem;
+  gap: 0;
+}
+.select-section .inner {
+  width: 100%;
+  padding: 0 3rem;
+}
+.select-section .inner .head-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  width: 100%;
+}
+.select-section .inner .head-box .tit-box {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  margin-bottom: 1rem;
+  gap: 0.2rem;
+}
+.select-section .inner .head-box .tit-box .head-img {
+  display: inline-block;
+  background: url("../img/ic-category.png") no-repeat center/cover;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 20%;
+}
+.select-section .inner .head-box .tit-box .head-tit {
+  font-size: 2rem;
+  font-weight: bold;
+}
+.select-section .inner .head-box .tit {
+  width: 100%;
+  text-align: left;
+  font-size: 1.6rem;
+}
+.select-section .inner .head-box .txt-box {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: flex-start;
+}
+.select-section .inner .head-box .txt-box .txt {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: rgb(106, 106, 211);
+  margin-right: auto;
+}
+.select-section .inner .head-box .txt-box .reset-btn {
+  cursor: pointer;
+  font-size: 1.1rem;
+  padding: 0.25rem 1rem;
+  background-color: rgb(202, 197, 197);
+}
+.select-section .inner .head-box .detaitxt-box {
+  width: 100%;
+  justify-content: flex-start;
+  display: none;
+}
+.select-section .inner .head-box .detaitxt-box .sub-txt {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: red;
+  margin-right: auto;
+}
+.select-section .inner .card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  gap: 2rem;
+}
+.select-section .inner .card ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.select-section .inner .card ul .list {
+  cursor: pointer;
+  transition: all 0.2s;
+  flex: 0 0 33.33%;
+  padding: 0.5rem;
+  border-top: 0;
+  position: relative;
+}
+.select-section .inner .card ul .list:active {
+  transform: scale(0.97) translateY(-0.1rem);
+  filter: brightness(0.9);
+}
+.select-section .inner .card ul .list [class*=img-] {
+  display: inline-block;
+  width: 100%;
+  padding-bottom: 100%;
+  border-radius: 1rem;
+  box-shadow: 3px -3px 6px 0 rgba(37, 83, 185, 0.1);
+}
+.select-section .inner .card ul .list [class*=img-].img-beauty {
+  background: url("../imgs/img-beauty.jpg") no-repeat center/cover;
+}
+.select-section .inner .card ul .list [class*=img-].img-fashion {
+  background: url("../imgs/img-fashion.jpg") no-repeat center/cover;
+}
+.select-section .inner .card ul .list [class*=img-].img-child {
+  background: url("../imgs/img-child.jpg") no-repeat center/cover;
+}
+.select-section .inner .card ul .list [class*=img-].img-food {
+  background: url("../imgs/img-food.jpg") no-repeat center/cover;
+}
+.select-section .inner .card ul .list [class*=img-].img-living {
+  background: url("../imgs/img-living.jpg") no-repeat center/cover;
+}
+.select-section .inner .card ul .list [class*=img-].img-appliances {
+  background: url("../imgs/img-appliances.jpg") no-repeat center/cover;
+}
+.select-section .inner .card ul .list [class*=img-].img-goods {
+  background: url("../imgs/img-goods.jpg") no-repeat center/cover;
+}
+.select-section .inner .card ul .list [class*=img-].img-health {
+  background: url("../imgs/img-health.jpg") no-repeat center/cover;
+}
+.select-section .inner .card ul .list [class*=img-].img-etc {
+  background: url("../imgs/img-etc.jpg") no-repeat center/cover;
+}
+.select-section .inner .card ul .list .check-box {
+  display: none;
+}
+.select-section .inner .card ul .list .check-box:checked + label {
+  display: block;
+  background: url("../imgs/ic-check-fill.svg") no-repeat center/cover;
+  width: 5.5vw;
+  height: 5.5vw;
+}
+.select-section .inner .card ul .list label {
+  display: block;
+  background: url("../imgs/ic-check-empty.svg") no-repeat center/cover;
+  width: 5vw;
+  height: 5vw;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+.select-section .inner .card ul .list .txt {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+.select-section .inner .card .btn-complete {
+  cursor: pointer;
+  width: 100%;
+  background-color: rgb(106, 106, 211);
+  color: white;
+  border: none;
+  margin-right: 0;
+  font-size: 1.2rem;
+  font-weight: 600;
+  border-radius: 5rem;
+  padding: 0.5rem 1rem;
+}
+
+@media (max-width: 300px) {
+  .preferredCategory .inner .card ul .list .txt {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+  }
+}
+.total-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 2rem;
+}
+.total-section img {
+  width: 100%;
+  max-width: 40rem;
 }
 
 .intro {

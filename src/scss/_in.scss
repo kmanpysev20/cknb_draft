@@ -1,4 +1,4 @@
-.sub-section {
+.in-section {
     display : flex;
     flex-direction: column;
     justify-content: center;
@@ -6,6 +6,7 @@
     height: 100vh;
     padding : 2rem;
     img {
-        max-width: 35rem;
+        width: 100%;
+        max-width: 40rem;
     }
 }
