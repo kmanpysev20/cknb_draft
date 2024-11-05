@@ -1,117 +1,109 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
-
+<html lang="ko">
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Continuous scrolling - fullPage.js</title>
-    <meta name="author" content="Matthew Howell" />
-    <meta name="description" content="fullPage continuous scrolling demo." />
-    <meta name="keywords"  content="fullpage,jquery,demo,scroll,loop,continuous" />
-    <meta name="Resource-type" content="Document" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자산 순서 변경</title>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+            padding: 20px;
+        }
 
+        .container {
+            max-width: 400px;
+            margin: auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
 
-    <link rel="stylesheet" type="text/css" href="../jquery.fullPage.css" />
-    <link rel="stylesheet" type="text/css" href="examples.css" />
+        h2 {
+            margin-bottom: 10px;
+        }
 
-    <!--[if IE]>
-        <script type="text/javascript">
-             var console = { log: function() {} };
-        </script>
-    <![endif]-->
+        .sortable-item {
+            padding: 15px;
+            margin-bottom: 10px;
+            background-color: #f5f5f5;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            cursor: move;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
 
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+        .save-button {
+            width: 100%;
+            padding: 15px;
+            font-size: 16px;
+            color: white;
+            background-color: #4e9eff;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
 
-    <script type="text/javascript" src="../jquery.fullPage.js"></script>
-    <script type="text/javascript" src="examples.js"></script>
-    <script type="text/javascript">
-        $(document).ready(function() {
-            $('#fullpage').fullpage({
-              sectionsColor: ['#1bbc9b', '#4BBFC3', '#7BAABE', 'whitesmoke', '#ccddff'],
-              anchors: ['firstPage', 'secondPage', '3rdPage', '4thpage', 'lastPage'],
-            });
-        });
-    </script>
-
+        .save-button:hover {
+            background-color: #3b82e3;
+        }
+    </style>
 </head>
 <body>
 
-<ul id="menu">
-    <li data-menuanchor="firstPage" class="active"><a href="#firstPage">First slide</a></li>
-    <li data-menuanchor="secondPage"><a href="#secondPage">Second slide</a></li>
-    <li data-menuanchor="3rdPage"><a href="#3rdPage">Third slide</a></li>
-</ul>
-
-<select id="demosMenu">
-  <option selected>Choose Demo</option>
-  <option id="activeSlide">Active section and slide</option>
-  <option id="apple">Apple iPhone demo (animations)</option>
-  <option id="autoHeight">Auto height</option>
-  <option id="autoplayVideoAndAudio">Autoplay Video and Audio</option>
-  <option id="backgrounds">Background images</option>
-  <option id="backgroundsFixed">Fixed fullscreen backgrounds</option>
-  <option id="backgroundVideo">Background video</option>
-  <option id="callbacks">Callbacks</option>
-  <option id="continuousHorizontal">Continuous horizontal</option>
-  <option id="continuousVertical">Continuous vertical</option>
-  <option id="parallax">Parallax</option>
-  <option id="css3">CSS3</option>
-  <option id="dragAndMove">Drag And Move</option>
-  <option id="easing">Easing</option>
-  <option id="fadingEffect">Fading Effect</option>
-  <option id="fixedHeaders">Fixed headers</option>
-  <option id="gradientBackgrounds">Gradient backgrounds</option>
-  <option id="interlockedSlides">Interlocked Slides</option>
-  <option id="looping">Looping</option>
-  <option id="methods">Methods</option>
-  <option id="navigationV">Vertical navigation dots</option>
-  <option id="navigationH">Horizontal navigation dots</option>
-  <option id="noAnchor">No anchor links</option>
-  <option id="normalScroll">Normal scrolling</option>
-  <option id="normalScrollElements">Normal scroll elements</option>
-  <option id="offsetSections">Offset sections</option>
-  <option id="oneSection">One single section</option>
-  <option id="resetSliders">Reset sliders</option>
-  <option id="responsiveAutoHeight">Responsive Auto Height</option>
-  <option id="responsiveHeight">Responsive Height</option>
-  <option id="responsiveWidth">Responsive Width</option>
-  <option id="responsiveSlides">Responsive Slides</option>
-  <option id="scrollBar">Scroll bar enabled</option>
-  <option id="scrollHorizontally">Scroll horizontally</option>
-  <option id="scrollOverflow">Scroll inside sections and slides</option>
-  <option id="scrollOverflowReset">ScrollOverflow Reset</option>
-  <option id="lazyLoad">Lazy load</option>
-  <option id="scrollingSpeed">Scrolling speed</option>
-</select>
-
-<div id="fullpage">
-    <div class="section " id="section0">
-        <h1>fullPage.js</h1>
-        <p>Continuous Scrolling Enabled</p>
-        <img src="imgs/fullPage.png" alt="fullPage" />
-    </div>
-    <div class="section active" id="section1">
-        <div class="slide" id="slide1">
-            <div class="intro">
-                <h1>Around the world scrolling</h1>
-                <p>Go to the first section and scroll up or to the last one and scroll down to see how it works.</p>
-            </div>
-        </div>
-        <div class="slide active" id="slide2">
-            <h1>Slide 2</h1>
-        </div>
-        <div class="slide" id="slide3">
-            <h1>Slide 3</h1>
-        </div>
-
-    </div>
-    <div class="section" id="section2">
-        <div class="intro">
-            <h1>Scroll Down</h1>
-            <p>And it will animate down to the first section</p>
-        </div>
-    </div>
+<div class="container">
+    <h2>자산 순서 변경</h2>
+    <ul id="sortable">
+        <li class="sortable-item">계좌 <span class="handle">☰</span></li>
+        <li class="sortable-item">소비 <span class="handle">☰</span></li>
+        <li class="sortable-item">투자 <span class="handle">☰</span></li>
+        <li class="sortable-item">보험 <span class="handle">☰</span></li>
+        <li class="sortable-item">대출 <span class="handle">☰</span></li>
+        <li class="sortable-item">연금 <span class="handle">☰</span></li>
+        <li class="sortable-item">포인트·머니 <span class="handle">☰</span></li>
+    </ul>
+    <button class="save-button" onclick="saveOrder()">저장</button>
 </div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+<script>
+    $(function() {
+        $("#sortable").sortable({
+            handle: ".handle",
+            placeholder: "sortable-placeholder"
+        });
+        $("#sortable").disableSelection();
+    });
+
+    function saveOrder() {
+        let order = [];
+        $("#sortable .sortable-item").each(function(index, element) {
+            order.push($(element).text().trim());
+        });
+        console.log("저장된 순서:", order);
+
+        // 예시: 순서를 서버에 저장하려면 AJAX 요청을 사용할 수 있습니다.
+        /*
+        $.ajax({
+            type: "POST",
+            url: "save_order.php",  // 서버의 저장 엔드포인트로 수정
+            data: { order: order },
+            success: function(response) {
+                alert("순서가 저장되었습니다.");
+            },
+            error: function() {
+                alert("순서 저장에 실패했습니다.");
+            }
+        });
+        */
+    }
+</script>
 
 </body>
 </html>
